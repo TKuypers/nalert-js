@@ -1,0 +1,21 @@
+{
+  "name": "nalert-js",
+  "authors": [
+    "Expertees <ties@expertees.nl>"
+  ],
+  "description": "\"super lightweight and easy to use alert alternative\"",
+  "main": "nalert.js",
+  "keywords": [
+    "alert",
+    "nalert"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/TKuypers/nalert-js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
