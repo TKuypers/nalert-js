@@ -53,7 +53,7 @@ function nalert(message)
 							'<p class="nalert--message" style="'+messageStyle+'">'+
 							'<span>'+message+'</span>'+
 							'</p>'+
-							'<a href="#" class="nalert--btn js-nalert-btn-ok" style="'+btnStyle+'" title="Ok">Ok</a>'+
+							'<a class="nalert--btn js-nalert-btn-ok" style="'+btnStyle+'" title="Ok">Ok</a>'+
 						'</div>';
 
 
@@ -84,15 +84,6 @@ function nalert(message)
 	};
 
 
-	var closePopup = function(e)
-	{
-		// prevent default
-		e.preventDefault();
-
-		// remove the element
-		document.querySelector('body').removeChild(wrapper);
-	};
-
 
 	var overlay = createOverlay();
 	var popup   = createPopup();
@@ -106,8 +97,21 @@ function nalert(message)
 
 	body.insertBefore(wrapper, body.firstChild);
 
+	var closePopup = function(e)
+	{
+		// prevent default
+		e.preventDefault();
+
+		// remove the element
+		document.querySelector('body').removeChild(wrapper);
+
+		return false;
+	};
+
+
 	// set the close btn
 	var closeBtn = document.querySelector('.js-nalert-btn-ok');
 		closeBtn.addEventListener('mouseup', closePopup);
 		closeBtn.addEventListener('touchend', closePopup);
 };
+
